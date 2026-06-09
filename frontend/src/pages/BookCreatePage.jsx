@@ -27,12 +27,6 @@ function BookCreatePage({ onNavigate }) {
         const newBook = {
           ...bookData,
           coverImageUrl: "",
-          createdAt: new Date().toLocaleString("sv-SE", {
-            timeZone: "Asia/Seoul",
-          }),
-          updatedAt: new Date().toLocaleString("sv-SE", {
-            timeZone: "Asia/Seoul",
-          }),
         };
  
         await createBook(newBook);
