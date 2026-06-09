@@ -22,7 +22,7 @@ public class Book {
     private Long id;
 
     @Column(nullable = false)
-    @NotBlank
+    @NotBlanka
     private String title;
 
     @Column(nullable = false)
