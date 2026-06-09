@@ -45,7 +45,7 @@ public class BookController {
 
     @PatchMapping("/api/books/{id}/cover")
     public Book updateBookCover(@PathVariable Long id, @RequestBody Book book) {
-        return bookService.updateBookCover(id, book);
+        return bookService.updateBookCover(id, book.getCoverImageUrl());
     }
 
 }
