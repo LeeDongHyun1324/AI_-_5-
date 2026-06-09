@@ -112,7 +112,7 @@ export default function CoverImageGenerator({ book, onImageGenerated }) {
               style={{ cursor: 'pointer', margin: 8 }}
               onClick={async () => {
                 // 선택한 이미지 db.json에 저장
-                const patchRes = await fetch(`http://localhost:3000/books/${book.id}`, {
+                const patchRes = await fetch(`http://localhost:8080/api/books/${book.id}/cover`, {
                   method: 'PATCH',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify({ coverImageUrl: src }),
