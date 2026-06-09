@@ -33,6 +33,7 @@ public class Book {
     @Column(nullable = false, columnDefinition = "TEXT")
     private String content;
 
+    @Column(columnDefinition = "TEXT")
     private String coverImageUrl;
 
     @CreationTimestamp
