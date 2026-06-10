@@ -2,7 +2,8 @@ import { useState } from "react";
 import "./Login.css";
 
 function SignUpPage({ onNavigate }) {
-    const [id, setId] = useState("");
+    const [email, setEmail] = useState("");
+    const [nickname, setNickname] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConfirm, setPasswordConfirm] = useState("");
     const [apiKey, setApiKey] = useState("");
@@ -10,8 +11,12 @@ function SignUpPage({ onNavigate }) {
     const handleSignUp = (e) => {
         e.preventDefault();
 
-        if (!id.trim()) {
-            alert("아이디를 입력해주세요.");
+        if (!email.trim()) {
+            alert("이메일을 입력해주세요.");
+            return;
+        }
+        if (!nickname.trim()) {
+            alert("닉네임을 입력해주세요.");
             return;
         }
         if (!password.trim()) {
@@ -40,13 +45,24 @@ function SignUpPage({ onNavigate }) {
                 <form onSubmit={handleSignUp} className="signup-form">
 
                     <div className="signup-input-group">
-                        <label>아이디</label>
+                        <label>이메일</label>
+                        <input
+                            type="email"
+                            className="signup-input"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="이메일을 입력하세요"
+                        />
+                    </div>
+
+                    <div className="signup-input-group">
+                        <label>닉네임</label>
                         <input
                             type="text"
                             className="signup-input"
-                            value={id}
-                            onChange={(e) => setId(e.target.value)}
-                            placeholder="아이디를 입력하세요"
+                            value={nickname}
+                            onChange={(e) => setNickname(e.target.value)}
+                            placeholder="닉네임을 입력하세요"
                         />
                     </div>
 

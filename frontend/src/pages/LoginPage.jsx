@@ -2,14 +2,14 @@ import { useState } from "react";
 import "./Login.css";
 
 function LoginPage({ onNavigate }) {
-    const [id, setId] = useState("");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     const handleLogin = (e) => {
         e.preventDefault();
 
-        if (!id.trim()) {
-            alert("아이디를 입력해주세요.");
+        if (!email.trim()) {
+            alert("이메일을 입력해주세요.");
             return;
         }
         if (!password.trim()) {
@@ -32,13 +32,13 @@ function LoginPage({ onNavigate }) {
 
                 <form onSubmit={handleLogin} className="login-form">
                     <div className="input-group">
-                        <label>아이디: </label>
+                        <label>이메일: </label>
                         <input
-                            type="text"
+                            type="email"
                             className="input-login"
-                            value={id}
-                            onChange={(e) => setId(e.target.value)}
-                            placeholder="아이디를 입력하세요"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="이메일을 입력하세요"
                         />
                     </div>
 
