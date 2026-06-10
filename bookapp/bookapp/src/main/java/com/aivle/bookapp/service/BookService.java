@@ -84,9 +84,9 @@ public class BookService {
         return books.stream().map(book -> book.getTitle()).toList();
     }
 
-    // 제목 키워드로 도서 GET
+    // 제목, 저자 키워드로 도서 GET
     @Transactional(readOnly = true)
     public List<Book> searchByKeyword(String keyword) {
-        return bookRepository.findByTitleContaining(keyword);
+        return bookRepository.findByTitleOrAuthorOrContentContaining(keyword, keyword, keyword);
     }
 }
