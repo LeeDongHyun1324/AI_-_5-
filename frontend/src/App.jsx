@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
+import SignUpPage from './pages/SignUpPage';
 import BookListPage from './pages/BookListPage';
 import BookEditPage from './pages/BookEditPage';
 import BookDetailPage from './pages/BookDetailPage';
@@ -19,7 +20,7 @@ function App() {
     <>
       <Navbar onNavigate={setPage} />
       {page === 'home' && <HomePage onNavigate={setPage} />}
-      {page === 'list' && <BookListPage onNavigate={setPage} 
+      {page === 'list' && <BookListPage onNavigate={setPage}
                             setSelectedBookId={setSelectedBookId}
                             key={refreshTrigger}
                             onEditClick={(book) => {
@@ -27,8 +28,8 @@ function App() {
                                                     setPage('edit');
                                                   }
                                         }/>}
-      {page === 'edit' && <BookEditPage 
-                      book={editingBook} 
+      {page === 'edit' && <BookEditPage
+                      book={editingBook}
                           onCancel={() => {
                             setEditingBook(null);
                             setPage('list');
@@ -48,6 +49,7 @@ function App() {
                                                         }
        />}
       {page === 'login' && <LoginPage onNavigate={setPage} />}
+      {page === 'signup' && <SignUpPage onNavigate={setPage} />}
     </>
   );
 }

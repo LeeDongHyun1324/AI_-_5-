@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./Login.css";
 
-//Login 팝업 페이지
 function LoginPage({ onNavigate }) {
     const [id, setId] = useState("");
     const [password, setPassword] = useState("");
@@ -36,6 +35,7 @@ function LoginPage({ onNavigate }) {
                         <label>아이디: </label>
                         <input
                             type="text"
+                            className="input-login"
                             value={id}
                             onChange={(e) => setId(e.target.value)}
                             placeholder="아이디를 입력하세요"
@@ -46,16 +46,25 @@ function LoginPage({ onNavigate }) {
                         <label>비밀번호: </label>
                         <input
                             type="password"
+                            className="input-login"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             placeholder="비밀번호를 입력하세요"
                         />
                     </div>
 
-                    <div className="button-group">
-                        <button type="submit" className="login-submit-btn">로그인</button>
+                    <div className="login-button-group">
                         <button type="button" onClick={handleCancel} className="login-cancel-btn">취소</button>
+                        <button type="submit" className="login-submit-btn">로그인</button>
                     </div>
+
+                    <button
+                        type="button"
+                        onClick={() => onNavigate('signup')}
+                        className="signup-btn"
+                    >
+                        회원가입
+                    </button>
                 </form>
             </div>
         </div>
