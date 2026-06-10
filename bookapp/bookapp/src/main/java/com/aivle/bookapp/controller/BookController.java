@@ -16,33 +16,39 @@ public class BookController {
 
     private final BookService bookService;
 
+    // 모든 책 출력
     @GetMapping("/api/books")
     public List<Book> getAllBooks() {
         return bookService.getAllBooks();
     }
 
+    // 특정 id 책 출력
     @GetMapping("/api/books/{id}")
     public Book getBook(@PathVariable Long id) {
         return bookService.getBook(id);
     }
 
+    // 책 생성
     @PostMapping("/api/books")
     public ResponseEntity<Book> createBook(@Valid @RequestBody Book book) {
         Book saved = bookService.createBook(book);
         return ResponseEntity.status(HttpStatus.CREATED).body(saved);
     }
 
+    // 특정 id 책 수정
     @PatchMapping("/api/books/{id}")
     public Book updateBook(@PathVariable Long id, @RequestBody Book book) {
         return bookService.updateBook(id, book);
     }
 
+    // 특정 id 책 삭제
     @DeleteMapping("/api/books/{id}")
     public ResponseEntity<Void> deleteBook(@PathVariable Long id) {
         bookService.deleteBook(id);
         return ResponseEntity.noContent().build();
     }
 
+    // 특정 id 책 이미지 커버 생성
     @PatchMapping("/api/books/{id}/cover")
     public Book updateBookCover(@PathVariable Long id, @RequestBody Book book) {
         return bookService.updateBookCover(id, book.getCoverImageUrl());
