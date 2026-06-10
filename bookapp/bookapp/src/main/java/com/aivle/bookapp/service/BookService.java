@@ -87,6 +87,6 @@ public class BookService {
     // 제목, 저자 키워드로 도서 GET
     @Transactional(readOnly = true)
     public List<Book> searchByKeyword(String keyword) {
-        return bookRepository.findByTitleOrAuthorOrContentContaining(keyword, keyword, keyword);
+        return bookRepository.searchByKeyword(keyword);
     }
 }
