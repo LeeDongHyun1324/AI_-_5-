@@ -9,6 +9,7 @@ import "./BookDetailPage.css";
 function BookDetailPage({ onNavigate, bookId, onEditClick }) {
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
+  const isLogin = !!localStorage.getItem("token");
 
   //도서 상세 조회
   useEffect(() => {
@@ -53,15 +54,42 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
       <h2 className="book-title">{book.title}</h2>
 
       {/* 수정/삭제 버튼 */}
-      <button className="btn-edit" onClick={() => onEditClick(book)}>
+      <button
+        className="btn-edit"
+        onClick={() => {
+
+          if (!isLogin) {
+            alert("로그인 후 이용 가능합니다.");
+            return;
+          }
+          onEditClick(book);
+        }}
+      >
         수정
       </button>
-      <button className="btn-delete" onClick={() => handleDelete(book.id)}>삭제</button>
+
+      <button
+        className="btn-delete"
+        onClick={() => {
+          if (!isLogin) {
+            alert("로그인 후 이용 가능합니다.");
+            return;
+          }
+          handleDelete(book.id);
+        }}
+      >
+        삭제
+      </button>
 
       <hr />
       {/* AI 표지 생성 컴포넌트 */}
-      <CoverImageGenerator book={book} onImageGenerated={handleImageGenerated} />
-
+      {isLogin ? (
+        <CoverImageGenerator book={book} onImageGenerated={handleImageGenerated} />
+      ) : (
+        <p className="status-message">
+          로그인 후 AI 표지 생성이 가능합니다.
+        </p>
+      )}
       <hr />
 
       {/* 표지 이미지 출력 */}
