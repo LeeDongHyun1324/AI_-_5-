@@ -37,13 +37,21 @@ public class BookService {
     @Transactional
     public Book updateBook(Long id, Book updatedBook) {
         Book book = getBook(id);
+        if (updatedBook.getTitle() != null) {
+            book.setTitle(updatedBook.getTitle());
+        }
 
-        book.setTitle(updatedBook.getTitle());
-        book.setContent(updatedBook.getContent());
-        book.setAuthor(updatedBook.getAuthor());
+        if (updatedBook.getContent() != null) {
+            book.setContent(updatedBook.getContent());
+        }
+
+        if (updatedBook.getAuthor() != null) {
+            book.setAuthor(updatedBook.getAuthor());
+        }
 
         return bookRepository.save(book);
     }
+
 
     // 도서 삭제
     @Transactional
