@@ -477,3 +477,21 @@ body {
 .btn-delete:hover {
   background: var(--color-danger-bg);
 }
+
+
+.login-btn {
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-btn:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
