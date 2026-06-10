@@ -9,11 +9,15 @@ export default function BookListPage({onNavigate, onEditClick, setSelectedBookId
   const [keyword, setKeyword] = useState("");
 
   useEffect(() => {
-    getBooks()
-      .then(setBooks)
-      .catch((err) => setError(err.message))
-      .finally(() => setLoading(false));
-  }, []);
+    const timer = setTimeout(() => {
+      getBooks(keyword)
+        .then(setBooks)
+        .catch((err) => setError(err.message))
+        .finally(() => setLoading(false));
+    }, keyword ? 300 : 0);
+
+    return () => clearTimeout(timer);
+  }, [keyword]);
 
   async function handleDelete(id) {
     if (!window.confirm('정말 삭제하시겠습니까?')) return;
@@ -55,15 +59,7 @@ export default function BookListPage({onNavigate, onEditClick, setSelectedBookId
         <p className="status-message">등록된 도서가 없습니다.</p>
       ) : (
         <ul className="book-list">
-          {books.filter((book) => {
-              const search = keyword.toLowerCase();
-
-              return (
-                book.title.toLowerCase().includes(search) ||
-                book.author.toLowerCase().includes(search) ||
-                book.content.toLowerCase().includes(search)
-              );
-            }).map((book) => (
+          {books.map((book) => (
             <li key={book.id} onClick={() => {
                 setSelectedBookId(book.id);
                 onNavigate("detail");
