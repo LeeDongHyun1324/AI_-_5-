@@ -1,6 +1,18 @@
-function Navbar({ onNavigate }) {
+function Navbar({ onNavigate, isLogin, setIsLogin }) {
 
-  const isLogin = !!localStorage.getItem("token");
+  const username = localStorage.getItem("username");
+
+  const handleLogout = () => {
+      localStorage.removeItem("token");
+      localStorage.removeItem("userId");
+      localStorage.removeItem("username");
+
+      setIsLogin(false);
+
+      alert("로그아웃 되었습니다.");
+
+      onNavigate("home");
+  };
 
   return (
     <nav className="navbar">
@@ -19,11 +31,36 @@ function Navbar({ onNavigate }) {
         </button>
       )}
 
-        <button className="login-btn" onClick={() => onNavigate('login')}>
-          Login
-        </button>
-      </div>
-    </nav>
+      {!isLogin ? (
+                <button
+                  className="login-btn"
+                  onClick={() => onNavigate("login")}
+                >
+                  Login
+                </button>
+              ) : (
+                <>
+                  <span
+                    style={{
+                      fontWeight: "bold",
+                      marginRight: "10px",
+                      display: "flex",
+                      alignItems: "center"
+                    }}
+                  >
+                    {username}님 환영합니다!
+                  </span>
+
+                  <button
+                    className="login-btn"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </button>
+                </>
+              )}
+            </div>
+          </nav>
   );
 }
 

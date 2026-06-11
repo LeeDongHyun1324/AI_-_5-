@@ -5,36 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe0e3535-6e55-49f8-a0f6-18f936823ece" name="변경" comment="AI 표지 생성 분리">
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/controller/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/controller/LikesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/domain/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/domain/Likes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/domain/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/dto/request/CommentRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/dto/request/LoginRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/dto/request/SignupRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/dto/response/CommentResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/dto/response/LoginResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/dto/response/UserResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/jwt/JwtProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/repository/CommentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/repository/LikesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/CryptoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/LikesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/bookapp.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/bookapp.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookapp.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookapp/bookapp/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/bookapp/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookapp/bookapp/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bookdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/bookdb.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-DI8Hxiyg.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-DI8Hxiyg.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-runtime.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/rolldown-binding.darwin-arm64.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/fsevents.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/fsevents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/fsevents.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/lightningcss.darwin-arm64.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/api/openai.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/openai.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/GenerateCoverImage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/GenerateCoverImage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/LoginPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/SignUpPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/SignUpPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +107,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.BookappApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "Merging dahyun-frontend-ai",
+    "git-widget-placeholder": "donghyun-backend",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/Desktop/miniproj5",
     "node.js.selected.package.tslint": "(autodetect)",
