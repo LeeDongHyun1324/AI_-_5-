@@ -18,11 +18,9 @@ function App() {
   const [selectedBookId, setSelectedBookId] = useState(null);
   const [selectedBook, setSelectedBook] = useState(null);
 
-  const [isLogin, setIsLogin] = useState(!!localStorage.getItem("token"));
-
   return (
     <>
-      <Navbar onNavigate={setPage} isLogin={isLogin} setIsLogin={setIsLogin}/>
+      <Navbar onNavigate={setPage} />
       {page === 'home' && <HomePage onNavigate={setPage} />}
       {page === 'list' && <BookListPage onNavigate={setPage}
                             setSelectedBookId={setSelectedBookId}
@@ -53,7 +51,7 @@ function App() {
                                                             }
                                                         }
        />}
-      {page === 'login' && (<LoginPage onNavigate={setPage} setIsLogin={setIsLogin}/>)}
+      {page === 'login' && <LoginPage onNavigate={setPage} />}
       {page === 'signup' && <SignUpPage onNavigate={setPage} />}
       {page === 'generateCover' && <GenerateCoverImage onNavigate={setPage} book={editingBook} />}
     </>

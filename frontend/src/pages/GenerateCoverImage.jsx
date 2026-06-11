@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { generateCoverImage } from '../api/openai';
 
 export default function GenerateCoverImage({ book, onNavigate }) {
@@ -8,41 +8,6 @@ export default function GenerateCoverImage({ book, onNavigate }) {
     const [selectedQuality, setSelectedQuality] = useState('medium');
     const [loading, setLoading] = useState(false);
     const [generatedImages, setGeneratedImages] = useState([]);
-
-    useEffect(() => {
-        loadApiKey();
-    }, []);
-
-    async function loadApiKey() {
-        try {
-            const token = localStorage.getItem("token");
-
-            if (!token) {
-                return;
-            }
-
-            const response = await fetch(
-                "http://localhost:8080/api/auth/apikey",
-                {
-                    method: "GET",
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                }
-            );
-
-            if (!response.ok) {
-                throw new Error("API Key 조회 실패");
-            }
-
-            const apiKey = await response.text();
-
-            setUserApiKey(apiKey);
-
-        } catch (error) {
-            console.error(error);
-        }
-    }
 
     // 혹시라도 book 데이터가 없을 경우 (안전 장치)
     if (!book) {
@@ -62,7 +27,7 @@ export default function GenerateCoverImage({ book, onNavigate }) {
 
         setLoading(true);
         try {
-            const images = await generateCoverImage(book, selectedQuality, selectedStyle, extraDetail);
+            const images = await generateCoverImage(book, userApiKey, selectedQuality, selectedStyle, extraDetail);
             setGeneratedImages(images);
         } catch (err) {
             console.error(err);
