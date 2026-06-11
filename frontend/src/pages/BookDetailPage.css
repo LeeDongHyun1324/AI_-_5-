@@ -259,6 +259,16 @@
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.16);
 }
 
+.book-cover {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.16);
+}
+
 /* 내용 */
 
 .book-content-title {
@@ -321,4 +331,48 @@
 
 .detail-back-btn:hover {
   background-color: #cbd5e1;
+}
+
+.like-section {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.like-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.comment-section {
+  margin-top: 30px;
+}
+
+.comment-input-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.comment-input-box input {
+  flex: 1;
+  padding: 10px;
+}
+
+.comment-input-box button {
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.comment-list {
+  list-style: none;
+  padding: 0;
+}
+
+.comment-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }

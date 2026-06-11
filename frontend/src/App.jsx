@@ -15,6 +15,7 @@ function App() {
   const [editingBook, setEditingBook] = useState(null);
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [selectedBookId, setSelectedBookId] = useState(null);
+  const [selectedBook, setSelectedBook] = useState(null);
 
   return (
     <>
@@ -50,6 +51,11 @@ function App() {
        />}
       {page === 'login' && <LoginPage onNavigate={setPage} />}
       {page === 'signup' && <SignUpPage onNavigate={setPage} />}
+      {page === "generate-cover" && (<GenerateCoverPage
+    book={selectedBook}
+    onNavigate={handleNavigate}
+  />
+)}
     </>
   );
 }
