@@ -54,17 +54,6 @@ public class BookController {
         return bookService.updateBookCover(id, book.getCoverImageUrl());
     }
 
-    // 제목으로 도서 GET
-    @GetMapping("/api/books/search/title")
-    public List<Book> searchByTitle(@RequestParam String title) {
-        return bookService.searchByTitle(title);
-    }
-
-    // 작가명으로 도서 GET
-    @GetMapping("/api/books/search/author")
-    public List<Book> authorGetTitle(@RequestParam String author) {
-        return bookService.authorGetTitle(author);
-    }
     // 제목, 저자 키워드로 도서 GET
     @GetMapping("/api/books/search/keyword")
     public List<Book> searchByKeyword(@RequestParam String keyword) {

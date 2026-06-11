@@ -33,13 +33,6 @@ public class CommentController {
         return commentService.addComment(bookId, userId, req.content());
     }
 
-    // 댓글 수정 (작성자만)
-    @PatchMapping("/comments/{commentId}")
-    public CommentResponse update(@PathVariable Long commentId,
-                                  @RequestBody CommentRequest req) {
-        Long userId = authService.getCurrentUser().getId();
-        return commentService.updateComment(commentId, userId, req.content());
-    }
 
     // 댓글 삭제 (작성자만)
     @DeleteMapping("/comments/{commentId}")

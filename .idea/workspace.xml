@@ -4,8 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe0e3535-6e55-49f8-a0f6-18f936823ece" name="변경" comment="AI 표지 생성 분리">
+    <list default="true" id="fe0e3535-6e55-49f8-a0f6-18f936823ece" name="변경" comment="BookCard 좋아요 추가, BookEditPage에 표지 이미지 추가.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bookdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/bookdb.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/acorn.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/acorn.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/baseline-browser-mapping.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/baseline-browser-mapping.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/browserslist.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/eslint.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/jsesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/jsesc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/json-server.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/json-server.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/json5.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/json5.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/mime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/mime.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/nanoid.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/nanoid.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/node-which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/node-which.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/parser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/parser.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/rolldown.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/rolldown.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/update-browserslist-db.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/update-browserslist-db.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/vite.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/vite.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/rolldown-binding.darwin-arm64.node" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/rolldown-binding.darwin-arm64.node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/BookCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/BookCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/BookEditPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/BookEditPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/GenerateCoverImage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/GenerateCoverImage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +119,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.BookappApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "donghyun-backend",
+    "git-widget-placeholder": "Merging dahyun-frontend-ai",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/Desktop/miniproj5",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -154,7 +195,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781142879726</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="BookCard 좋아요 추가, BookEditPage에 표지 이미지 추가.">
+      <option name="closed" value="true" />
+      <created>1781164059651</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1781164059651</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +214,7 @@
     <MESSAGE value="로그인 팝업창 추가" />
     <MESSAGE value="이메일, 닉네임 추가" />
     <MESSAGE value="AI 표지 생성 분리" />
-    <option name="LAST_COMMIT_MESSAGE" value="AI 표지 생성 분리" />
+    <MESSAGE value="BookCard 좋아요 추가, BookEditPage에 표지 이미지 추가." />
+    <option name="LAST_COMMIT_MESSAGE" value="BookCard 좋아요 추가, BookEditPage에 표지 이미지 추가." />
   </component>
 </project>
