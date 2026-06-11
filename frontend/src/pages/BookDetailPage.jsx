@@ -26,12 +26,6 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
     fetchBook();
   }, [bookId]);
 
-
-  //AI 표지 이미지 생성 후 상태 업데이트
-  function handleImageGenerated(imageUrl) {
-    setBook((prev) => ({ ...prev, coverImageUrl: imageUrl }));
-  }
-
   if (loading) return <p>도서 정보를 불러오는 중입니다...</p>;
   if (!book) return <p>도서 정보를 찾을 수 없습니다.</p>;
 

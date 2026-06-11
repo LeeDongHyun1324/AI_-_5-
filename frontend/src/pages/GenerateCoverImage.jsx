@@ -110,6 +110,7 @@ export default function GenerateCoverImage({ book, onNavigate }) {
                             <img
                                 key={index}
                                 src={src}
+                                alt="생성된 AI 표지 후보"
                                 width="200"
                                 style={{ cursor: 'pointer', border: "2px solid transparent", borderRadius: "8px" }}
                                 onMouseOver={(e) => e.target.style.borderColor = "var(--color-primary)"}
