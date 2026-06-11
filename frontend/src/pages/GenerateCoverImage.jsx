@@ -62,7 +62,7 @@ export default function GenerateCoverImage({ book, onNavigate }) {
 
         setLoading(true);
         try {
-            const images = await generateCoverImage(book, userApiKey, selectedQuality, selectedStyle, extraDetail);
+            const images = await generateCoverImage(book, selectedQuality, selectedStyle, extraDetail);
             setGeneratedImages(images);
         } catch (err) {
             console.error(err);
