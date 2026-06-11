@@ -62,7 +62,7 @@ public class BookController {
 
     // 작가명으로 도서 GET
     @GetMapping("/api/books/search/author")
-    public List<String> authorGetTitle(@RequestParam String author) {
+    public List<Book> authorGetTitle(@RequestParam String author) {
         return bookService.authorGetTitle(author);
     }
     // 제목, 저자 키워드로 도서 GET
