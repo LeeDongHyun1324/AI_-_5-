@@ -1,6 +1,8 @@
 package com.aivle.bookapp.exception;
-public class BookNotFoundException extends RuntimeException{
+
+public class BookNotFoundException extends RuntimeException {
+
     public BookNotFoundException(Long id) {
-        super("Book not found: id="+ id);
+        super("해당 도서를 찾을 수 없습니다. id=" + id);
     }
 }

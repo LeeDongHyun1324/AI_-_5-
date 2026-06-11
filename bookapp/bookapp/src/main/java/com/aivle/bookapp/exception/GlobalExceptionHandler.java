@@ -13,6 +13,7 @@ import java.util.Map;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
     @ExceptionHandler(BookNotFoundException.class)
     public ResponseEntity<Map<String, String>> handleBookNotFound(BookNotFoundException e) {
         Map<String, String> body = Map.of(
@@ -23,14 +24,14 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(body);
     }
 
-    @ExceptionHandler(AiCoverGenerationException.class)
-    public ResponseEntity<Map<String, String>> handleAiCoverGeneration(AiCoverGenerationException e) {
+    @ExceptionHandler(CoverImageException.class)
+    public ResponseEntity<Map<String, String>> handleCoverImageException(CoverImageException e) {
         Map<String, String> body = Map.of(
-                "error", "AI_COVER_GENERATION_FAILED",
+                "error", "COVER_IMAGE_ERROR",
                 "message", e.getMessage()
         );
 
-        return ResponseEntity.status(HttpStatus.BAD_GATEWAY).body(body);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(body);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)

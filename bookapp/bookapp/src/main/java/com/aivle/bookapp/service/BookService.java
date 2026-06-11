@@ -1,11 +1,12 @@
 package com.aivle.bookapp.service;
 
 import com.aivle.bookapp.domain.Book;
-import com.aivle.bookapp.exception.BookNotFoundException;
 import com.aivle.bookapp.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.aivle.bookapp.exception.BookNotFoundException;
+import com.aivle.bookapp.exception.CoverImageException;
 
 import java.util.List;
 
@@ -24,8 +25,8 @@ public class BookService {
     // 도서 상세 조회
     @Transactional(readOnly = true)
     public Book getBook(Long id) {
-        return bookRepository.findById(id).orElseThrow(()
-            -> new BookNotFoundException(id));
+        return bookRepository.findById(id)
+                .orElseThrow(() -> new BookNotFoundException(id));
     }
 
     // 도서 등록
@@ -65,6 +66,10 @@ public class BookService {
     @Transactional
     public Book updateBookCover(Long id, String coverImageUrl) {
         Book book = getBook(id);
+
+        if (coverImageUrl == null || coverImageUrl.isBlank()) {
+            throw new CoverImageException("저장할 표지 이미지가 없습니다.");
+        }
 
         book.setCoverImageUrl(coverImageUrl);
 
