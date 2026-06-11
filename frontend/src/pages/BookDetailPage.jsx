@@ -35,7 +35,7 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
     fetchBook();
   }, [bookId]);
 
-  // ✅ 추가된 좋아요 불러오기
+  //추가된 좋아요 불러오기
   useEffect(() => {
     async function fetchLikes() {
       const token = localStorage.getItem("token");
@@ -70,7 +70,7 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
       }
   }
 
-  // ✅ 수정된 좋아요 처리
+  //좋아요 처리
   async function handleLike() {
     const token = localStorage.getItem("token");
 
