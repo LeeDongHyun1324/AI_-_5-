@@ -55,4 +55,10 @@ public class CommentService {
             throw new ResponseStatusException(HttpStatus.FORBIDDEN, "작성자만 삭제할 수 있음");
         commentRepository.delete(c);
     }
+
+    // 댓글 누적 개수 반환
+    @Transactional(readOnly = true)
+    public long getCommentCount(Long bookId) {
+        return commentRepository.countByBookId(bookId);
+    }
 }
