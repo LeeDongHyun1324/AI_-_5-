@@ -8,7 +8,7 @@ function SignUpPage({ onNavigate }) {
     const [passwordConfirm, setPasswordConfirm] = useState("");
     const [apiKey, setApiKey] = useState("");
 
-    const handleSignUp = (e) => {
+    const handleSignUp = async (e) => {
         e.preventDefault();
 
         if (!email.trim()) {
@@ -33,7 +33,37 @@ function SignUpPage({ onNavigate }) {
             return;
         }
 
-        alert("회원가입이 완료되었습니다.");
+        try {
+            const response = await fetch(
+                "http://localhost:8080/api/auth/signup",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        email,
+                        username: nickname,
+                        password,
+                        apiKey,
+                    }),
+                }
+            );
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(errorText || "회원가입 실패");
+            }
+
+            alert("회원가입이 완료되었습니다.");
+
+            onNavigate("login");
+
+        } catch (error) {
+            console.error(error);
+            alert(error.message || "회원가입에 실패했습니다.");
+        }
+
         onNavigate("home");
     };
 

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { deleteBook } from '../api/books';
 import { getBookById } from "../api/books";
+import { getComments, addComment, deleteComment } from "../api/comments";
 
 import "./BookDetailPage.css";
 
@@ -8,6 +9,7 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const isLogin = !!localStorage.getItem("token");
+  const myName = localStorage.getItem("username");   // 내 댓글 구분용
   const [likeCount, setLikeCount] = useState(0);
   const [liked, setLiked] = useState(false);
   const [commentInput, setCommentInput] = useState("");
@@ -21,6 +23,7 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
         // const response = await fetch(`http://localhost:3000/books/${bookId}`); //현재 db.json파일 1개만 추가해놓은 상태로 하드코딩. 배포 시 http://localhost:3000/books/${id}로 변경
         // const data = await response.json();
         setBook(data);
+        setComments(await getComments(bookId)); // ← 이 줄만 추가!
       } catch (error) {
         console.error("도서 상세 조회 실패:", error);
       } finally {
@@ -54,19 +57,34 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
     setLiked((prev) => !prev);
   }
 
-  function handleAddComment() {
+  // ===== 댓글 등록 =====
+  async function handleAddComment() {
+    if (!isLogin) {
+      alert("로그인 후 이용 가능합니다.");
+      return;
+    }
     if (commentInput.trim() === "") {
       alert("댓글을 입력해주세요.");
       return;
     }
+    try {
+      await addComment(bookId, commentInput.trim());
+      setComments(await getComments(bookId)); // 다시 불러오기
+      setCommentInput("");
+    } catch (e) {
+      alert(e.message);
+    }
+  }
 
-    const newComment = {
-      id: Date.now(),
-      content: commentInput,
-    };
-
-    setComments((prev) => [...prev, newComment]);
-    setCommentInput("");
+  // ===== 댓글 삭제 =====
+  async function handleDeleteComment(commentId) {
+    if (!window.confirm("댓글을 삭제할까요?")) return;
+    try {
+      await deleteComment(commentId);
+      setComments(await getComments(bookId));
+    } catch (e) {
+      alert(e.message);
+    }
   }
 
   return (
@@ -137,7 +155,7 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
         <div className="comment-input-box">
           <input
             type="text"
-            placeholder="댓글을 입력하세요"
+            placeholder={isLogin ? "댓글을 입력하세요" : "로그인 후 작성 가능합니다"}
             value={commentInput}
             onChange={(e) => setCommentInput(e.target.value)}
           />
@@ -146,10 +164,15 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
 
         <ul className="comment-list">
           {comments.map((comment) => (
-            <li key={comment.id}>{comment.content}</li>
-          ))}
-        </ul>
-      </div>
+              <li key={comment.id}>
+                  <b>{comment.username}</b> : {comment.content}
+                   {myName === comment.username && (
+                       <button onClick={() => handleDeleteComment(comment.id)}>삭제</button>
+                   )}
+               </li>
+              ))}
+          </ul>
+         </div>
       
       {/* 목록으로 돌아가기 버튼 */}
       <button className="detail-back-btn" onClick={() => onNavigate("list")}>도서 목록으로 돌아가기</button>
