@@ -53,16 +53,10 @@
 * Notion
 
 ### 테스트 도구
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 * Postman
 
 ---
 
-<<<<<<< Updated upstream
-=======
 ## ERD
 
 ![ERD](images/ERD.png)
@@ -75,7 +69,6 @@
 
 ---
 
->>>>>>> Stashed changes
 ## 프로젝트 구조
 
 ```bash
@@ -141,21 +134,13 @@ cd bookapp/bookapp
 
 Backend 기본 실행 주소는 다음과 같습니다.
 
-<<<<<<< Updated upstream
 ```bash
-=======
-```text
->>>>>>> Stashed changes
 http://localhost:8080
 ```
 
 H2 Console 접속 주소는 다음과 같습니다.
 
-<<<<<<< Updated upstream
 ```bash
-=======
-```text
->>>>>>> Stashed changes
 http://localhost:8080/h2-console
 ```
 
@@ -169,11 +154,7 @@ npm run dev
 
 Frontend 기본 실행 주소는 다음과 같습니다.
 
-<<<<<<< Updated upstream
 ```bash
-=======
-```text
->>>>>>> Stashed changes
 http://localhost:5173
 ```
 
@@ -208,10 +189,7 @@ http://localhost:5173
 * 등록된 도서 목록 조회
 * 도서 제목, 저자, 표지 이미지 확인
 * 상세 페이지 이동
-<<<<<<< Updated upstream
-=======
 * 댓글 및 좋아요 개수 확인
->>>>>>> Stashed changes
 
 ### 5. 도서 상세 조회
 
@@ -256,11 +234,7 @@ http://localhost:5173
 * 도서 CRUD API 구현
 * 도서 표지 이미지 저장 API 구현
 * 사용자 정의 예외처리 구현
-<<<<<<< Updated upstream
 * GlobalExceptionHandler를 통한 공통 에러 응답 처리
-=======
-* `GlobalExceptionHandler`를 통한 공통 에러 응답 처리
->>>>>>> Stashed changes
 * H2 Database 연동
 * JPA Entity 설계
 
@@ -363,8 +337,4 @@ https://github.com/LeeDongHyun1324/AI_-_5-.git
 
 ### Notion
 
-<<<<<<< Updated upstream
 https://app.notion.com/p/5-37a447df1b5980bf8739dbfafc064a3f
-=======
-5차 미니프로젝트 | Notion
->>>>>>> Stashed changes
