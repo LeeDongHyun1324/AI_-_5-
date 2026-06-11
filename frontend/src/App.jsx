@@ -8,6 +8,7 @@ import BookListPage from './pages/BookListPage';
 import BookEditPage from './pages/BookEditPage';
 import BookDetailPage from './pages/BookDetailPage';
 import BookCreatePage from './pages/BookCreatePage';
+import GenerateCoverImage from './pages/GenerateCoverImage';
 
 function App() {
   const [page, setPage] = useState('home');
@@ -30,16 +31,17 @@ function App() {
                                         }/>}
       {page === 'edit' && <BookEditPage
                       book={editingBook}
-                          onCancel={() => {
-                            setEditingBook(null);
-                            setPage('list');
-                          }}
-                          onSuccess={() => {
-                            setEditingBook(null);
-                            setRefreshTrigger(prev => prev + 1);
-                            setPage('list');
-                          }}
-                          />}
+                      onNavigate={setPage}
+                      onCancel={() => {
+                        setEditingBook(null);
+                        setPage('list');
+                      }}
+                      onSuccess={() => {
+                        setEditingBook(null);
+                        setRefreshTrigger(prev => prev + 1);
+                        setPage('list');
+                      }}
+                      />}
       {page === 'create' && <BookCreatePage onNavigate={setPage} onEditClick={(book) => setEditingBook(book)}/>}
       {page === "detail" && <BookDetailPage onNavigate={setPage} bookId={selectedBookId}
                                             onEditClick={(book) => {
@@ -50,6 +52,7 @@ function App() {
        />}
       {page === 'login' && <LoginPage onNavigate={setPage} />}
       {page === 'signup' && <SignUpPage onNavigate={setPage} />}
+      {page === 'generateCover' && <GenerateCoverImage onNavigate={setPage} book={editingBook} />}
     </>
   );
 }

@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import { deleteBook } from '../api/books';
-
-import CoverImageGenerator from "../components/CoverImageGenerator";
 import { getBookById } from "../api/books";
 
 import "./BookDetailPage.css";
@@ -58,10 +56,10 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
         className="btn-edit"
         onClick={() => {
 
-          if (!isLogin) {
-            alert("로그인 후 이용 가능합니다.");
-            return;
-          }
+          // if (!isLogin) {
+          //   alert("로그인 후 이용 가능합니다.");
+          //   return;
+          // }
           onEditClick(book);
         }}
       >
@@ -80,17 +78,6 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
       >
         삭제
       </button>
-
-      <hr />
-      {/* AI 표지 생성 컴포넌트 */}
-      {isLogin ? (
-        <CoverImageGenerator book={book} onImageGenerated={handleImageGenerated} />
-      ) : (
-        <p className="status-message">
-          로그인 후 AI 표지 생성이 가능합니다.
-        </p>
-      )}
-      <hr />
 
       {/* 표지 이미지 출력 */}
       {book.coverImageUrl ? (
