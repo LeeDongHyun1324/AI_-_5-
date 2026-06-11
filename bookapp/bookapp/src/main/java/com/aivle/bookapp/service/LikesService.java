@@ -46,4 +46,11 @@ public class LikesService {
 
         return likesRepository.existsByBook_IdAndUser_Id(bookId, userId);
     }
+
+    //좋아요 누적 개수 확인
+    @Transactional(readOnly = true)
+    public long getLikeCount(Long bookId) {
+        return likesRepository.countByBook_Id(bookId);
+    }
+
 }

@@ -42,6 +42,7 @@ public class LikesController {
         return ResponseEntity.noContent().build();
     }
 
+    //좋아요 눌렀는지 확인
     @GetMapping("/api/likes/{bookId}")
     public ResponseEntity<Boolean> isLiked(@PathVariable Long bookId) {
 
@@ -51,4 +52,15 @@ public class LikesController {
 
         return ResponseEntity.ok(result);
     }
+
+
+    //좋아요 누적 개수 반환
+    @GetMapping("/api/likes/count/{bookId}")
+    public ResponseEntity<Long> getLikeCount(@PathVariable Long bookId) {
+
+        long count = likesService.getLikeCount(bookId);
+
+        return ResponseEntity.ok(count);
+    }
+
 }
