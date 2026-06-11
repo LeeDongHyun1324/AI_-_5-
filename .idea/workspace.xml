@@ -116,7 +116,7 @@
 }]]></component>
   <component name="RunManager">
     <configuration name="BookappApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UnknownPolicyInFreeMode" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="bookapp.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.aivle.bookapp.BookappApplication" />
       <extension name="coverage">
