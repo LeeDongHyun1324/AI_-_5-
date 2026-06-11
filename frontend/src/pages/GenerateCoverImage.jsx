@@ -132,10 +132,18 @@ export default function GenerateCoverImage({ book, onNavigate }) {
                     {loading ? '생성 중...' : 'AI 표지 생성'}
                 </button>
 
-                <button type="button" onClick={() => onNavigate('edit')} style={{ padding: "10px 20px" }}>
-                    돌아가기
+                <button
+                  type="button"
+                  className="generator-btn"
+                  onClick={() => onNavigate('edit')}
+                  style={{
+                    padding: "10px 20px",
+                    backgroundColor: "#64748b"
+                  }}
+                >
+                  돌아가기
                 </button>
-            </div>
+              </div>
 
             {generatedImages.length > 0 && (
                 <div style={{ marginTop: "32px" }}>
