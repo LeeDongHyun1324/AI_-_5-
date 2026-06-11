@@ -6,6 +6,7 @@ import com.aivle.bookapp.dto.request.SignupRequestDto;
 import com.aivle.bookapp.dto.response.LoginResponseDto;
 import com.aivle.bookapp.dto.response.UserResponseDto;
 import com.aivle.bookapp.service.AuthService;
+import com.aivle.bookapp.service.CryptoService;
 import com.aivle.bookapp.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -21,6 +22,7 @@ public class UserController {
 
     private final UserService userService;
     private final AuthService authService;
+    private final CryptoService cryptoService;
 
 
     @PostMapping("/api/auth/signup")
@@ -38,5 +40,18 @@ public class UserController {
         User user = authService.getCurrentUser();
 
         return new UserResponseDto(user.getId(), user.getUsername());
+    }
+
+    @GetMapping("/api/auth/apikey")
+    public ResponseEntity<String> getApiKey() {
+        User user = authService.getCurrentUser();
+
+        if (user.getEncryptedApiKey() == null || user.getEncryptedApiKey().isBlank()) {
+            return ResponseEntity.badRequest().body("등록된 API Key가 없습니다.");
+        }
+
+        String apiKey = cryptoService.decrypt(user.getEncryptedApiKey());
+
+        return ResponseEntity.ok(apiKey);
     }
 }
