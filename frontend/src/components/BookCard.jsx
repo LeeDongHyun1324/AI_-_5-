@@ -1,4 +1,5 @@
 export default function BookCard({ book, onDelete, onEdit }) {
+
   return (
     <div className="book-card">
       {book.coverImageUrl ? (
@@ -11,21 +12,9 @@ export default function BookCard({ book, onDelete, onEdit }) {
         <p className="card-author">{book.author}</p>
         <p className="card-content">{book.content}</p>
       </div>
-      <div className="card-buttons">
-        <button className="btn-edit" onClick={(e) => 
-            {e.stopPropagation();
-            onEdit(book);
-            }}
-          >
-          수정
-        </button>
-        <button className="btn-delete" onClick={(e) => 
-            {e.stopPropagation();
-            onDelete(book.id);
-            }}>
-          삭제
-        </button>
-      </div>
+     
     </div>
   );
 } 
+
+// 좋아요 + 댓글 간단 이모티콘(몇 개인지 보이게)

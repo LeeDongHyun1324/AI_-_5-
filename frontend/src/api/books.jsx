@@ -5,6 +5,8 @@ export async function getBooks(keyword = "") {
     ? `${BASE_URL}/books/search/keyword?keyword=${encodeURIComponent(keyword)}`
     : `${BASE_URL}/books`;
 
+    console.log("요청 주소:", url);
+
   const res = await fetch(url);
 
   if (!res.ok) throw new Error('도서 목록을 불러오지 못했습니다.');
