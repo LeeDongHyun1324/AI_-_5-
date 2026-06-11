@@ -5,14 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe0e3535-6e55-49f8-a0f6-18f936823ece" name="변경" comment="AI 표지 생성 분리">
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/controller/LikesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/domain/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/domain/Likes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/dto/request/CommentRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/dto/request/LoginRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/dto/request/SignupRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/dto/response/CommentResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/dto/response/LoginResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/dto/response/UserResponseDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/jwt/JwtProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/repository/LikesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/AuthService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/CryptoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/LikesService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/bookapp.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/bookapp.main.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/BookDetailPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/BookDetailPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/GenerateCoverImage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/GenerateCoverImage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp/bookapp/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/bookapp/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp/bookapp/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/bookdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/bookdb.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/bookapp/bookapp">
+      <ProjectState />
+    </projectState>
   </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
@@ -40,12 +72,12 @@
     &quot;assignee&quot;: &quot;yhdbgit&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/LeeDongHyun1324/AI_-_5-",
-    "accountId": "803ed119-f8e3-4883-a445-95d2da2b3771"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LeeDongHyun1324/AI_-_5-&quot;,
+    &quot;accountId&quot;: &quot;803ed119-f8e3-4883-a445-95d2da2b3771&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -62,17 +94,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build bookapp.executor": "Run",
     "Gradle.bookapp 빌드.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.BookappApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "hyeokjae-frontend-ai",
+    "git-widget-placeholder": "Merging dahyun-frontend-ai",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/Desktop/miniproj5",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
