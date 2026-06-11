@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { deleteBook } from '../api/books';
 import { getBookById } from "../api/books";
+import { getComments, addComment, deleteComment } from "../api/comments";
 
 import "./BookDetailPage.css";
 
@@ -8,10 +9,13 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const isLogin = !!localStorage.getItem("token");
+  const currentUserId = Number(localStorage.getItem("userId"));
+  const myName = localStorage.getItem("username");   // 내 댓글 구분용
   const [likeCount, setLikeCount] = useState(0);
   const [liked, setLiked] = useState(false);
   const [commentInput, setCommentInput] = useState("");
   const [comments, setComments] = useState([]);
+  const isOwner = book?.user?.id === currentUserId;
 
   //도서 상세 조회
   useEffect(() => {
@@ -21,6 +25,7 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
         // const response = await fetch(`http://localhost:3000/books/${bookId}`); //현재 db.json파일 1개만 추가해놓은 상태로 하드코딩. 배포 시 http://localhost:3000/books/${id}로 변경
         // const data = await response.json();
         setBook(data);
+        setComments(await getComments(bookId)); // ← 이 줄만 추가!
       } catch (error) {
         console.error("도서 상세 조회 실패:", error);
       } finally {
@@ -28,6 +33,27 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
       }
     }
     fetchBook();
+  }, [bookId]);
+
+  //추가된 좋아요 불러오기
+  useEffect(() => {
+    async function fetchLikes() {
+      const token = localStorage.getItem("token");
+
+      const resCount = await fetch(`http://localhost:8080/api/likes/count/${bookId}`);
+      const count = await resCount.json();
+      setLikeCount(count);
+
+      const resLiked = await fetch(`http://localhost:8080/api/likes/${bookId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const likedData = await resLiked.json();
+      setLiked(likedData);
+    }
+
+    fetchLikes();
   }, [bookId]);
 
   if (loading) return <p>도서 정보를 불러오는 중입니다...</p>;
@@ -44,29 +70,61 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
       }
   }
 
-  function handleLike() {
+  //좋아요 처리
+  async function handleLike() {
+    const token = localStorage.getItem("token");
+
     if (liked) {
-      setLikeCount((prev) => prev - 1);
+      await fetch(`http://localhost:8080/api/likes/${bookId}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
     } else {
-      setLikeCount((prev) => prev + 1);
+      await fetch(`http://localhost:8080/api/likes/${bookId}`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
     }
+
+    const res = await fetch(`http://localhost:8080/api/likes/count/${bookId}`);
+    const newCount = await res.json();
+    setLikeCount(newCount);
 
     setLiked((prev) => !prev);
   }
 
-  function handleAddComment() {
+  // ===== 댓글 등록 =====
+  async function handleAddComment() {
+    if (!isLogin) {
+      alert("로그인 후 이용 가능합니다.");
+      return;
+    }
     if (commentInput.trim() === "") {
       alert("댓글을 입력해주세요.");
       return;
     }
+    try {
+      await addComment(bookId, commentInput.trim());
+      setComments(await getComments(bookId)); // 다시 불러오기
+      setCommentInput("");
+    } catch (e) {
+      alert(e.message);
+    }
+  }
 
-    const newComment = {
-      id: Date.now(),
-      content: commentInput,
-    };
-
-    setComments((prev) => [...prev, newComment]);
-    setCommentInput("");
+  // ===== 댓글 삭제 =====
+  async function handleDeleteComment(commentId) {
+    if (!window.confirm("댓글을 삭제할까요?")) return;
+    try {
+      await deleteComment(commentId);
+      setComments(await getComments(bookId));
+    } catch (e) {
+      alert(e.message);
+    }
   }
 
   return (
@@ -74,33 +132,28 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
       {/* 도서 제목 */}
       <h2 className="book-title">{book.title}</h2>
 
-      {/* 수정/삭제 버튼 */}
-      <button
-        className="btn-edit"
-        onClick={() => {
+        {/* 수정/삭제 버튼 */}
+        {isOwner && (
+          <>
+            <button
+              className="btn-edit"
+              onClick={() => {
+                onEditClick(book);
+              }}
+            >
+              수정
+            </button>
 
-          // if (!isLogin) {
-          //   alert("로그인 후 이용 가능합니다.");
-          //   return;
-          // }
-          onEditClick(book);
-        }}
-      >
-        수정
-      </button>
-
-      <button
-        className="btn-delete"
-        onClick={() => {
-          if (!isLogin) {
-            alert("로그인 후 이용 가능합니다.");
-            return;
-          }
-          handleDelete(book.id);
-        }}
-      >
-        삭제
-      </button>
+            <button
+              className="btn-delete"
+              onClick={() => {
+                handleDelete(book.id);
+              }}
+            >
+              삭제
+            </button>
+          </>
+        )}
 
       <hr />
 
@@ -137,7 +190,7 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
         <div className="comment-input-box">
           <input
             type="text"
-            placeholder="댓글을 입력하세요"
+            placeholder={isLogin ? "댓글을 입력하세요" : "로그인 후 작성 가능합니다"}
             value={commentInput}
             onChange={(e) => setCommentInput(e.target.value)}
           />
@@ -146,16 +199,20 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
 
         <ul className="comment-list">
           {comments.map((comment) => (
-            <li key={comment.id}>{comment.content}</li>
-          ))}
-        </ul>
-      </div>
-      
+              <li key={comment.id}>
+                  <b>{comment.username}</b> : {comment.content}
+                   {myName === comment.username && (
+                       <button onClick={() => handleDeleteComment(comment.id)}>삭제</button>
+                   )}
+               </li>
+              ))}
+          </ul>
+         </div>
+
       {/* 목록으로 돌아가기 버튼 */}
       <button className="detail-back-btn" onClick={() => onNavigate("list")}>도서 목록으로 돌아가기</button>
     </main>
   );
 }
-
 
 export default BookDetailPage;
