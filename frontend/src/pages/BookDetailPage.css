@@ -281,6 +281,16 @@
   color: #1e293b;
 }
 
+.book-author {
+  margin-top: -12px;
+  margin-bottom: 24px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #64748b;
+}
+
 .book-content {
   font-size: 16px;
   line-height: 1.8;
@@ -372,7 +382,25 @@
   padding: 0;
 }
 
-.comment-list li {
+.comment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   padding: 10px;
   border-bottom: 1px solid #ddd;
+}
+
+.comment-delete-btn {
+  margin-left: 20px;
+
+  border: none;
+  border-radius: 6px;
+
+  padding: 6px 10px;
+
+  background-color: #fee2e2;
+  color: #dc2626;
+
+  cursor: pointer;
 }
