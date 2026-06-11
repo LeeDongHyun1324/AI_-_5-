@@ -35,6 +35,27 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
     fetchBook();
   }, [bookId]);
 
+  // ✅ 추가된 좋아요 불러오기
+  useEffect(() => {
+    async function fetchLikes() {
+      const token = localStorage.getItem("token");
+
+      const resCount = await fetch(`http://localhost:8080/api/likes/count/${bookId}`);
+      const count = await resCount.json();
+      setLikeCount(count);
+
+      const resLiked = await fetch(`http://localhost:8080/api/likes/${bookId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const likedData = await resLiked.json();
+      setLiked(likedData);
+    }
+
+    fetchLikes();
+  }, [bookId]);
+
   if (loading) return <p>도서 정보를 불러오는 중입니다...</p>;
   if (!book) return <p>도서 정보를 찾을 수 없습니다.</p>;
 
@@ -49,12 +70,29 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
       }
   }
 
-  function handleLike() {
+  // ✅ 수정된 좋아요 처리
+  async function handleLike() {
+    const token = localStorage.getItem("token");
+
     if (liked) {
-      setLikeCount((prev) => prev - 1);
+      await fetch(`http://localhost:8080/api/likes/${bookId}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
     } else {
-      setLikeCount((prev) => prev + 1);
+      await fetch(`http://localhost:8080/api/likes/${bookId}`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
     }
+
+    const res = await fetch(`http://localhost:8080/api/likes/count/${bookId}`);
+    const newCount = await res.json();
+    setLikeCount(newCount);
 
     setLiked((prev) => !prev);
   }
@@ -170,12 +208,11 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
               ))}
           </ul>
          </div>
-      
+
       {/* 목록으로 돌아가기 버튼 */}
       <button className="detail-back-btn" onClick={() => onNavigate("list")}>도서 목록으로 돌아가기</button>
     </main>
   );
 }
-
 
 export default BookDetailPage;

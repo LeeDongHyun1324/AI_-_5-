@@ -6,10 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="fe0e3535-6e55-49f8-a0f6-18f936823ece" name="변경" comment="AI 표지 생성 분리">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/domain/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/domain/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/BookappApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/BookappApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bookdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/bookdb.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/api/books.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/api/books.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/bookdb.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/bookdb.trace.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-DI8Hxiyg.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-DI8Hxiyg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react-dom_client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/react_jsx-runtime.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/BookDetailPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/BookDetailPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +90,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.BookappApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "donghyun-backend",
+    "git-widget-placeholder": "kyumin-backend",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/Desktop/miniproj5",
     "node.js.selected.package.tslint": "(autodetect)",
