@@ -5,22 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe0e3535-6e55-49f8-a0f6-18f936823ece" name="변경" comment="AI 표지 생성 분리">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bookdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/bookdb.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/rolldown-binding.darwin-arm64.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/fsevents.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/fsevents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/fsevents.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/lightningcss.darwin-arm64.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/acorn.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/acorn.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/baseline-browser-mapping.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/baseline-browser-mapping.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/browserslist.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/browserslist.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/eslint.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/eslint.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/jsesc.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/jsesc.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/json-server.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/json-server.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/json5.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/json5.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/mime.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/mime.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/nanoid.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/nanoid.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/node-which.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/node-which.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/parser.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/parser.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/rolldown.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/rolldown.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/update-browserslist-db.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/update-browserslist-db.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/vite.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/vite.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-win32-x64-msvc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-win32-x64-msvc/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-win32-x64-msvc/rolldown-binding.win32-x64-msvc.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-win32-x64-msvc/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-win32-x64-msvc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-win32-x64-msvc/lightningcss.win32-x64-msvc.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-win32-x64-msvc/package.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +117,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.BookappApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "daeun-exception",
+    "git-widget-placeholder": "hyeokjae-frontend-ai",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/Desktop/miniproj5",
     "node.js.selected.package.tslint": "(autodetect)",
