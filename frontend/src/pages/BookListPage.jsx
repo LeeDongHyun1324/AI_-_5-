@@ -7,6 +7,7 @@ export default function BookListPage({onNavigate, onEditClick, setSelectedBookId
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [keyword, setKeyword] = useState("");
+  const isLogin = !!localStorage.getItem("token");
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -46,14 +47,20 @@ export default function BookListPage({onNavigate, onEditClick, setSelectedBookId
             className="search-input"
           />
 
-          <button
-            className="btn-primary"
-            onClick={() => onNavigate('create')}
-          >
-            + 도서 등록
-          </button>
+            <button
+              className="btn-primary"
+              onClick={() => {
+                if (!isLogin) {
+                  alert("로그인 후 이용 가능합니다.");
+                  return;
+                }
+                onNavigate("create");
+              }}
+            >
+              + 도서 등록
+            </button>
+          </div>
         </div>
-      </div>
 
       {books.length === 0 ? (
         <p className="status-message">등록된 도서가 없습니다.</p>
