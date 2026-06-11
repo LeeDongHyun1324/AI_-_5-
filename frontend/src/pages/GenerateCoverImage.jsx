@@ -149,7 +149,6 @@ export default function GenerateCoverImage({ book, onNavigate, onSuccess }) {
                                 key={index}
                                 src={src}
                                 alt="생성된 AI 표지 후보"
-                                width="200"
                                 className="generated-cover-img"
                                 onClick={async () => {
                                     const patchRes = await fetch(`http://localhost:8080/api/books/${book.id}/cover`, {
