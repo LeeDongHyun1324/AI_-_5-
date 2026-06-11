@@ -16,7 +16,6 @@ function App() {
   const [editingBook, setEditingBook] = useState(null);
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [selectedBookId, setSelectedBookId] = useState(null);
-  const [selectedBook, setSelectedBook] = useState(null);
 
   const [isLogin, setIsLogin] = useState(!!localStorage.getItem("token"));
 
@@ -55,7 +54,13 @@ function App() {
        />}
       {page === 'login' && (<LoginPage onNavigate={setPage} setIsLogin={setIsLogin}/>)}
       {page === 'signup' && <SignUpPage onNavigate={setPage} />}
-      {page === 'generateCover' && <GenerateCoverImage onNavigate={setPage} book={editingBook} />}
+      {page === 'generateCover' && (
+          <GenerateCoverImage onNavigate={setPage} book={editingBook} onSuccess={(newImageUrl) => {
+                setEditingBook({ ...editingBook, coverImageUrl: newImageUrl });
+                setPage('edit');
+              }}
+          />
+      )}
     </>
   );
 }
