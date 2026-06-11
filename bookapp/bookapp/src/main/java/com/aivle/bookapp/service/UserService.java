@@ -24,8 +24,8 @@ public class UserService {
 
     public UserResponseDto signup(SignupRequestDto request) {
 
-        if (userRepository.existsByUsername(request.getUsername())) {
-            throw new RuntimeException("이미 존재하는 사용자입니다.");
+        if (userRepository.existsByEmail(request.getEmail())) {
+            throw new RuntimeException("이미 존재하는 이메일입니다.");
         }
 
         if (userRepository.existsByUsername(request.getUsername())) {
