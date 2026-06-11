@@ -8,10 +8,12 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const isLogin = !!localStorage.getItem("token");
+  const currentUserId = Number(localStorage.getItem("userId"));
   const [likeCount, setLikeCount] = useState(0);
   const [liked, setLiked] = useState(false);
   const [commentInput, setCommentInput] = useState("");
   const [comments, setComments] = useState([]);
+  const isOwner = book?.user?.id === currentUserId;
 
   //도서 상세 조회
   useEffect(() => {
@@ -74,33 +76,28 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
       {/* 도서 제목 */}
       <h2 className="book-title">{book.title}</h2>
 
-      {/* 수정/삭제 버튼 */}
-      <button
-        className="btn-edit"
-        onClick={() => {
+        {/* 수정/삭제 버튼 */}
+        {isOwner && (
+          <>
+            <button
+              className="btn-edit"
+              onClick={() => {
+                onEditClick(book);
+              }}
+            >
+              수정
+            </button>
 
-          // if (!isLogin) {
-          //   alert("로그인 후 이용 가능합니다.");
-          //   return;
-          // }
-          onEditClick(book);
-        }}
-      >
-        수정
-      </button>
-
-      <button
-        className="btn-delete"
-        onClick={() => {
-          if (!isLogin) {
-            alert("로그인 후 이용 가능합니다.");
-            return;
-          }
-          handleDelete(book.id);
-        }}
-      >
-        삭제
-      </button>
+            <button
+              className="btn-delete"
+              onClick={() => {
+                handleDelete(book.id);
+              }}
+            >
+              삭제
+            </button>
+          </>
+        )}
 
       <hr />
 

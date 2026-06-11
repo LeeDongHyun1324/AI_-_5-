@@ -1,6 +1,7 @@
 package com.aivle.bookapp.service;
 
 import com.aivle.bookapp.domain.Book;
+import com.aivle.bookapp.domain.User;
 import com.aivle.bookapp.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -13,6 +14,7 @@ import java.util.List;
 public class BookService {
 
     private final BookRepository bookRepository;
+    private final AuthService authService;
 
     // 도서 목록 조회
     @Transactional(readOnly = true)
@@ -30,6 +32,10 @@ public class BookService {
     // 도서 등록
     @Transactional
     public Book createBook(Book book) {
+        User currentUser = authService.getCurrentUser();
+
+        book.setUser(currentUser);
+
         return bookRepository.save(book);
     }
 
@@ -37,6 +43,13 @@ public class BookService {
     @Transactional
     public Book updateBook(Long id, Book updatedBook) {
         Book book = getBook(id);
+
+        User currentUser = authService.getCurrentUser();
+
+        if (!book.getUser().getId().equals(currentUser.getId())) {
+            throw new RuntimeException("수정 권한이 없습니다.");
+        }
+
         if (updatedBook.getTitle() != null) {
             book.setTitle(updatedBook.getTitle());
         }
@@ -57,6 +70,13 @@ public class BookService {
     @Transactional
     public void deleteBook(Long id) {
         Book book = getBook(id);
+
+        User currentUser = authService.getCurrentUser();
+
+        if (!book.getUser().getId().equals(currentUser.getId())) {
+            throw new RuntimeException("삭제 권한이 없습니다.");
+        }
+
         bookRepository.delete(book);
     }
 
