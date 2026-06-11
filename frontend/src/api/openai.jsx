@@ -1,5 +1,32 @@
+async function getUserApiKey() {
+  const token = localStorage.getItem("token");
+
+  const response = await fetch(
+    "http://localhost:8080/api/auth/apikey",
+    {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("API Key 조회 실패");
+  }
+
+  const apiKey = await response.text();
+
+  console.log("복호화된 API Key:", apiKey);
+
+  return apiKey;
+}
+
 // OpenAI 이미지 생성 API 호출 → 바로 쓸 수 있는 Data URL(imageSrc)을 반환
-export async function generateCoverImage(book, apiKey, quality, style, extraDetail) {
+export async function generateCoverImage(book, quality, style, extraDetail) {
+
+  const apiKey = await getUserApiKey();
+
   const prompt = `
   아래 책 정보를 바탕으로 정면에서 바라본 2D 책 표지 이미지를 생성해줘.
 

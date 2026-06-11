@@ -1,24 +1,59 @@
 import { useState } from "react";
 import "./Login.css";
 
-function LoginPage({ onNavigate }) {
+function LoginPage({ onNavigate, setIsLogin }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
 
         if (!email.trim()) {
             alert("이메일을 입력해주세요.");
             return;
         }
+
         if (!password.trim()) {
             alert("비밀번호를 입력해주세요.");
             return;
         }
 
-        alert("로그인 되었습니다.");
-        onNavigate("home");
+        try {
+            const response = await fetch(
+                "http://localhost:8080/api/auth/login",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        email,
+                        password,
+                    }),
+                }
+            );
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(errorText || "로그인 실패");
+            }
+
+            const data = await response.json();
+
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("userId", data.id);
+            localStorage.setItem("username", data.username);
+
+            setIsLogin(true);
+
+            alert("로그인 되었습니다.");
+
+            onNavigate("home");
+
+        } catch (error) {
+            console.error(error);
+            alert(error.message || "로그인에 실패했습니다.");
+        }
     };
 
     const handleCancel = () => {
