@@ -22,10 +22,8 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
     async function fetchBook() {
       try {
         const data = await getBookById(bookId);
-        // const response = await fetch(`http://localhost:3000/books/${bookId}`); //현재 db.json파일 1개만 추가해놓은 상태로 하드코딩. 배포 시 http://localhost:3000/books/${id}로 변경
-        // const data = await response.json();
         setBook(data);
-        setComments(await getComments(bookId)); // ← 이 줄만 추가!
+        setComments(await getComments(bookId));
       } catch (error) {
         console.error("도서 상세 조회 실패:", error);
       } finally {
@@ -38,11 +36,12 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
   //추가된 좋아요 불러오기
   useEffect(() => {
     async function fetchLikes() {
-      const token = localStorage.getItem("token");
-
       const resCount = await fetch(`http://localhost:8080/api/likes/count/${bookId}`);
       const count = await resCount.json();
       setLikeCount(count);
+
+      const token = localStorage.getItem("token");
+      if (!token) return;
 
       const resLiked = await fetch(`http://localhost:8080/api/likes/${bookId}`, {
         headers: {
@@ -72,6 +71,11 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
 
   //좋아요 처리
   async function handleLike() {
+    if (!isLogin) {
+      alert("로그인 후 이용 가능합니다.");
+      return;
+    }
+
     const token = localStorage.getItem("token");
 
     if (liked) {

@@ -43,10 +43,9 @@ export default function GenerateCoverImage({ book, onNavigate, onSuccess }) {
         }
     }
 
-    // 혹시라도 book 데이터가 없을 경우 (안전 장치)
     if (!book) {
         return (
-            <div style={{ padding: "48px", textAlign: "center" }}>
+            <div className="no-book-container">
                 <p>도서 정보가 없습니다.</p>
                 <button onClick={() => onNavigate('list')}>목록으로 돌아가기</button>
             </div>
@@ -72,7 +71,7 @@ export default function GenerateCoverImage({ book, onNavigate, onSuccess }) {
     }
 
     return (
-        <section style={{ padding: "48px", maxWidth: "720px", margin: "0 auto" }}>
+        <section className="generate-cover-section">
             <h3>AI 표지 생성 - [{book.title}]</h3>
 
             <label>OpenAI API Key:</label>
@@ -82,11 +81,10 @@ export default function GenerateCoverImage({ book, onNavigate, onSuccess }) {
                 placeholder="sk-xxxxxxxxxxxxxxxxxxxxxxxx"
                 value={userApiKey}
                 onChange={(e) => setUserApiKey(e.target.value)}
-                style={{ display: "block", marginBottom: "16px", width: "100%", padding: "8px" }}
             />
 
             <label>생성 모델:</label>
-            <select className="select-model" value="gpt-image-2" disabled style={{ display: "block", marginBottom: "16px", padding: "8px" }}>
+            <select className="select-model" value="gpt-image-2" disabled>
                 <option value="gpt-image-2">GPT Image 2 (1024x1536)</option>
             </select>
 
@@ -95,7 +93,6 @@ export default function GenerateCoverImage({ book, onNavigate, onSuccess }) {
                 className="select-quality"
                 value={selectedQuality}
                 onChange={(e) => setSelectedQuality(e.target.value)}
-                style={{ display: "block", marginBottom: "16px", padding: "8px" }}
             >
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
@@ -107,7 +104,6 @@ export default function GenerateCoverImage({ book, onNavigate, onSuccess }) {
                 className="select-style"
                 value={selectedStyle}
                 onChange={(e) => setSelectedStyle(e.target.value)}
-                style={{ display: "block", marginBottom: "16px", padding: "8px" }}
             >
                 <option value="none">기본 (지정 안 함)</option>
                 <option value="수채화풍, 부드러운 색감">수채화풍</option>
@@ -123,40 +119,38 @@ export default function GenerateCoverImage({ book, onNavigate, onSuccess }) {
                 placeholder="예) 고양이를 주인공으로, 파란색 계열로..."
                 value={extraDetail}
                 onChange={(e) => setExtraDetail(e.target.value)}
-                style={{ display: "block", marginBottom: "24px", width: "100%", height: "80px", padding: "8px" }}
             />
 
-            <div style={{ display: "flex", gap: "10px" }}>
-                <button type="button" className="generator-btn" onClick={handleGenerate} disabled={loading} style={{ padding: "10px 20px" }}>
+            <div className="button-group">
+                <button
+                    type="button"
+                    className="generator-btn primary-btn"
+                    onClick={handleGenerate}
+                    disabled={loading}
+                >
                     {loading ? '생성 중...' : 'AI 표지 생성'}
                 </button>
 
                 <button
-                  type="button"
-                  className="generator-btn"
-                  onClick={() => onNavigate('edit')}
-                  style={{
-                    padding: "10px 20px",
-                    backgroundColor: "#64748b"
-                  }}
+                    type="button"
+                    className="generator-btn secondary-btn"
+                    onClick={() => onNavigate('edit')}
                 >
-                  돌아가기
+                    돌아가기
                 </button>
-              </div>
+            </div>
 
             {generatedImages.length > 0 && (
-                <div style={{ marginTop: "32px" }}>
+                <div className="generated-images-section">
                     <p>표지를 클릭하면 저장됩니다:</p>
-                    <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
+                    <div className="image-list">
                         {generatedImages.map((src, index) => (
                             <img
                                 key={index}
                                 src={src}
                                 alt="생성된 AI 표지 후보"
                                 width="200"
-                                style={{ cursor: 'pointer', border: "2px solid transparent", borderRadius: "8px" }}
-                                onMouseOver={(e) => e.target.style.borderColor = "var(--color-primary)"}
-                                onMouseOut={(e) => e.target.style.borderColor = "transparent"}
+                                className="generated-cover-img"
                                 onClick={async () => {
                                     const patchRes = await fetch(`http://localhost:8080/api/books/${book.id}/cover`, {
                                         method: 'PATCH',

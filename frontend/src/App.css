@@ -254,6 +254,7 @@ body {
 }
 
 .btn-submit,
+.btn-editcover,
 .btn-cancel {
   border: none;
   padding: 14px 24px;
@@ -262,6 +263,16 @@ body {
   font-weight: 700;
   cursor: pointer;
   transition: 0.2s;
+}
+
+.btn-editcover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-editcover:hover {
+  background-color: var(--color-bg-light);
 }
 
 .btn-submit {
@@ -506,4 +517,74 @@ body {
 .login-btn:hover {
   background-color: var(--color-primary-hover);
   transform: translateY(-1px);
+}
+
+/* ── GenerateCoverImage ── */
+.no-book-container {
+  padding: 48px;
+  text-align: center;
+}
+
+.generate-cover-section {
+  padding: 48px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.input-apikey,
+.select-model,
+.select-quality,
+.select-style,
+.input-prompt {
+  display: block;
+  margin-bottom: 16px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.input-apikey,
+.input-prompt {
+  width: 100%;
+}
+
+.input-prompt {
+  margin-bottom: 24px;
+  height: 80px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.generator-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  background-color: #64748b;
+  color: white;
+  border: none;
+}
+
+.generated-images-section {
+  margin-top: 32px;
+}
+
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.generated-cover-img {
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: border-color 0.2s ease;
+}
+
+.generated-cover-img:hover {
+  border-color: var(--color-primary, #007bff);
 }
