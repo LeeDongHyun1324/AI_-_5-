@@ -31,13 +31,12 @@ export default function GenerateCoverImage({ book, onNavigate, onSuccess }) {
                 }
             );
 
-            if (!response.ok) {
-                throw new Error("API Key 조회 실패");
+            if (response.ok) {
+                const apiKey = await response.text();
+                setUserApiKey(apiKey);
+            } else {
+                console.error("API Key 조회 실패: 서버 응답 오류");
             }
-
-            const apiKey = await response.text();
-
-            setUserApiKey(apiKey);
 
         } catch (error) {
             console.error(error);

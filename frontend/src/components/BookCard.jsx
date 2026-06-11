@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getCommentCount } from "../api/comments";
 
-export default function BookCard({ book, onDelete, onEdit }) {
+export default function BookCard({ book }) {
   const [commentCount, setCommentCount] = useState(0);
   const [likeCount, setLikeCount] = useState(0);
 

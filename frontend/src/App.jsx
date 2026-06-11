@@ -16,7 +16,6 @@ function App() {
   const [editingBook, setEditingBook] = useState(null);
   const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [selectedBookId, setSelectedBookId] = useState(null);
-  const [selectedBook, setSelectedBook] = useState(null);
 
   const [isLogin, setIsLogin] = useState(!!localStorage.getItem("token"));
 
