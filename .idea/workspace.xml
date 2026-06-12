@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="fe0e3535-6e55-49f8-a0f6-18f936823ece" name="변경" comment="검색·좋아요 로직 수정, 불필요한 코드 정리, CSS 수정">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bookapp/bookapp/src/main/java/com/aivle/bookapp/service/AuthService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
