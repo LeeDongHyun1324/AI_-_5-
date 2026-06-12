@@ -5,9 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe0e3535-6e55-49f8-a0f6-18f936823ece" name="변경" comment="검색·좋아요 로직 수정, 불필요한 코드 정리, CSS 수정">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bookdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/bookdb.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/comment-api.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/comment-api.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/baseline-browser-mapping" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/baseline-browser-mapping" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/jsesc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/jsesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/json-server" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/json-server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/json5" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/mime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/nanoid" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/nanoid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/node-which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/rolldown" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/rolldown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/update-browserslist-db" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/update-browserslist-db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/vite" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/vite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/rolldown-binding.darwin-arm64.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/lightningcss.darwin-arm64.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,65 +74,6 @@
     &quot;accountId&quot;: &quot;803ed119-f8e3-4883-a445-95d2da2b3771&quot;
   }
 }</component>
-  <component name="NextEditCompletionFeaturesState">
-    <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0" />
-      <entry key="S60" value="1.0" />
-      <entry key="M2" value="1.0" />
-      <entry key="M5" value="1.0" />
-      <entry key="M10" value="1.0" />
-      <entry key="M15" value="1.0" />
-      <entry key="M30" value="1.0" />
-      <entry key="H1" value="1.0" />
-      <entry key="H2" value="1.0" />
-      <entry key="H4" value="1.0" />
-      <entry key="D1" value="1.0" />
-      <entry key="W1" value="1.0" />
-    </decayedCancelled>
-    <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="0.0" />
-      <entry key="M10" value="0.0" />
-      <entry key="M15" value="0.0" />
-      <entry key="M30" value="0.0" />
-      <entry key="H1" value="0.0" />
-      <entry key="H2" value="0.0" />
-      <entry key="H4" value="0.0" />
-      <entry key="D1" value="0.0" />
-      <entry key="W1" value="0.0" />
-    </decayedSelected>
-    <decayedShown>
-      <entry key="MS100" value="0.34151006418859886" />
-      <entry key="MS500" value="0.8066417592221263" />
-      <entry key="S2" value="0.9476984609483832" />
-      <entry key="S5" value="0.9787416503974358" />
-      <entry key="S10" value="0.9893137269832234" />
-      <entry key="S30" value="0.9964251446319013" />
-      <entry key="S60" value="0.9982109720053679" />
-      <entry key="M2" value="0.9991050855667626" />
-      <entry key="M5" value="0.9996419380761876" />
-      <entry key="M10" value="0.9998209530091814" />
-      <entry key="M15" value="0.9998806317771902" />
-      <entry key="M30" value="0.9999403141073923" />
-      <entry key="H1" value="0.9999701566083821" />
-      <entry key="H2" value="0.9999850781928609" />
-      <entry key="H4" value="0.9999925390685976" />
-      <entry key="D1" value="0.9999987565075673" />
-      <entry key="W1" value="0.9999998223581292" />
-    </decayedShown>
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -139,7 +103,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.BookappApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "dahyun-frontend-ai",
+    "git-widget-placeholder": "donghyun-backend",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/Desktop/miniproj5",
     "node.js.selected.package.tslint": "(autodetect)",
