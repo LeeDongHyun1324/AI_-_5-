@@ -1,13 +1,47 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { generateCoverImage } from '../api/openai';
 
-export default function GenerateCoverImage({ book, onNavigate }) {
+export default function GenerateCoverImage({ book, onNavigate, onSuccess }) {
     const [selectedStyle, setSelectedStyle] = useState('none');
     const [extraDetail, setExtraDetail] = useState('');
     const [userApiKey, setUserApiKey] = useState('');
     const [selectedQuality, setSelectedQuality] = useState('medium');
     const [loading, setLoading] = useState(false);
     const [generatedImages, setGeneratedImages] = useState([]);
+
+    useEffect(() => {
+        loadApiKey();
+    }, []);
+
+    async function loadApiKey() {
+        try {
+            const token = localStorage.getItem("token");
+
+            if (!token) {
+                return;
+            }
+
+            const response = await fetch(
+                "http://localhost:8080/api/auth/apikey",
+                {
+                    method: "GET",
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+
+            if (response.ok) {
+                const apiKey = await response.text();
+                setUserApiKey(apiKey);
+            } else {
+                console.error("API Key 조회 실패: 서버 응답 오류");
+            }
+
+        } catch (error) {
+            console.error(error);
+        }
+    }
 
     // 혹시라도 book 데이터가 없을 경우 (안전 장치)
     if (!book) {
@@ -27,7 +61,7 @@ export default function GenerateCoverImage({ book, onNavigate }) {
 
         setLoading(true);
         try {
-            const images = await generateCoverImage(book, userApiKey, selectedQuality, selectedStyle, extraDetail);
+            const images = await generateCoverImage(book, selectedQuality, selectedStyle, extraDetail);
             setGeneratedImages(images);
         } catch (err) {
             console.error(err);
@@ -97,10 +131,18 @@ export default function GenerateCoverImage({ book, onNavigate }) {
                     {loading ? '생성 중...' : 'AI 표지 생성'}
                 </button>
 
-                <button type="button" onClick={() => onNavigate('edit')} style={{ padding: "10px 20px" }}>
-                    돌아가기
+                <button
+                  type="button"
+                  className="generator-btn"
+                  onClick={() => onNavigate('edit')}
+                  style={{
+                    padding: "10px 20px",
+                    backgroundColor: "#64748b"
+                  }}
+                >
+                  돌아가기
                 </button>
-            </div>
+              </div>
 
             {generatedImages.length > 0 && (
                 <div style={{ marginTop: "32px" }}>
@@ -129,7 +171,11 @@ export default function GenerateCoverImage({ book, onNavigate }) {
 
                                     alert('표지가 성공적으로 저장되었습니다!');
 
-                                    onNavigate('edit');
+                                    if (onSuccess) {
+                                        onSuccess(src);
+                                    } else {
+                                        onNavigate('edit');
+                                    }
                                 }}
                             />
                         ))}

@@ -282,6 +282,18 @@ body {
   background-color: var(--color-gray-btn-hover);
 }
 
+.edit-cover-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.edit-cover-section .book-cover-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* ── BookListPage ── */
 .book-list-page {
   max-width: 960px;

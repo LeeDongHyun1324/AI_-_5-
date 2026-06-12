@@ -132,6 +132,10 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
       {/* 도서 제목 */}
       <h2 className="book-title">{book.title}</h2>
 
+      <p className="book-author">
+      작가: {book.author || "작가 정보 없음"}
+      </p>
+
         {/* 수정/삭제 버튼 */}
         {isOwner && (
           <>
@@ -199,12 +203,20 @@ function BookDetailPage({ onNavigate, bookId, onEditClick }) {
 
         <ul className="comment-list">
           {comments.map((comment) => (
-              <li key={comment.id}>
+              <li key={comment.id} className="comment-item">
+                <div>
                   <b>{comment.username}</b> : {comment.content}
-                   {myName === comment.username && (
-                       <button onClick={() => handleDeleteComment(comment.id)}>삭제</button>
-                   )}
-               </li>
+                </div>
+
+                {myName === comment.username && (
+                  <button
+                    className="comment-delete-btn"
+                    onClick={() => handleDeleteComment(comment.id)}
+                  >
+                    삭제
+                  </button>
+                )}
+              </li>
               ))}
           </ul>
          </div>
