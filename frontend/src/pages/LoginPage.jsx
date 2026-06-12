@@ -34,8 +34,7 @@ function LoginPage({ onNavigate, setIsLogin }) {
             );
 
             if (!response.ok) {
-                const errorText = await response.text();
-                throw new Error(errorText || "로그인 실패");
+                throw new Error("로그인 실패");
             }
 
             const data = await response.json();
@@ -52,7 +51,7 @@ function LoginPage({ onNavigate, setIsLogin }) {
 
         } catch (error) {
             console.error(error);
-            alert(error.message || "로그인에 실패했습니다.");
+            alert("로그인에 실패했습니다.");
         }
     };
 
