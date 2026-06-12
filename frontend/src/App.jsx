@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import "./App.css";
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
@@ -18,6 +18,48 @@ function App() {
   const [selectedBookId, setSelectedBookId] = useState(null);
 
   const [isLogin, setIsLogin] = useState(!!localStorage.getItem("token"));
+
+  useEffect(() => {
+    const checkLogin = async () => {
+      const token = localStorage.getItem("token");
+
+      if (!token) {
+        setIsLogin(false);
+        return;
+      }
+
+      try {
+        const response = await fetch(
+          "http://localhost:8080/api/auth/me",
+          {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("토큰 만료");
+        }
+
+        const user = await response.json();
+
+        localStorage.setItem("userId", user.id);
+        localStorage.setItem("username", user.username);
+
+        setIsLogin(true);
+
+      } catch (error) {
+        localStorage.removeItem("token");
+        localStorage.removeItem("userId");
+        localStorage.removeItem("username");
+
+        setIsLogin(false);
+      }
+    };
+
+    checkLogin();
+  }, []);
 
   return (
     <>

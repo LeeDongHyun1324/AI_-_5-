@@ -24,6 +24,10 @@ public class AuthService {
 
         String token = authHeader.substring(7);
 
+        if (!jwtProvider.validate(token)) {
+            throw new RuntimeException("유효하지 않은 토큰");
+        }
+
         Long userId = jwtProvider.getUserId(token);
 
         return userRepository.findById(userId).orElseThrow(() -> new RuntimeException("사용자 없음"));

@@ -34,8 +34,12 @@ function LoginPage({ onNavigate, setIsLogin }) {
             );
 
             if (!response.ok) {
-                throw new Error("로그인 실패");
-            }
+                if (response.status === 401) {
+                    throw new Error("로그인에 실패했습니다.");
+                }
+
+    throw new Error("서버 오류가 발생했습니다.");
+}
 
             const data = await response.json();
 
