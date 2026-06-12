@@ -1,0 +1,84 @@
+.generate-cover-section {
+    max-width: 720px;
+    margin: 70px auto;
+    padding: 48px;
+
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.generate-cover-section h3 {
+    margin-bottom: 28px;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.generate-cover-section label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: 600;
+}
+
+.input-apikey,
+.select-model,
+.select-quality,
+.select-style,
+.input-prompt {
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+
+    font-size: 15px;
+}
+
+.input-prompt {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.generator-btn {
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: #2563eb;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.secondary-btn {
+    background-color: #64748b;
+}
+
+.generated-images-section {
+    margin-top: 36px;
+}
+
+.image-list {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.generated-cover-img {
+    width: calc((100% - 32px) / 3);
+    height: auto;
+    border-radius: 12px;
+    cursor: pointer;
+    box-sizing: border-box;
+}

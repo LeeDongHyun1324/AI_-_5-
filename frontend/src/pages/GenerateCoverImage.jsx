@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { generateCoverImage } from '../api/openai';
+import "./GenerateCoverImage.css";
 
 export default function GenerateCoverImage({ book, onNavigate, onSuccess }) {
     const [selectedStyle, setSelectedStyle] = useState('none');

@@ -5,8 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe0e3535-6e55-49f8-a0f6-18f936823ece" name="변경" comment="검색·좋아요 로직 수정, 불필요한 코드 정리, CSS 수정">
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/GenerateCoverImage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/bookdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/bookdb.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/acorn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/baseline-browser-mapping" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/baseline-browser-mapping" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/browserslist" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/browserslist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/eslint" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/eslint" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/jsesc" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/jsesc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/json-server" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/json-server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/json5" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/mime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/nanoid" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/nanoid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/node-which" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/node-which" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/parser" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/parser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/rolldown" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/rolldown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/update-browserslist-db" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/update-browserslist-db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/vite" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/vite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-win32-x64-msvc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-win32-x64-msvc/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-win32-x64-msvc/rolldown-binding.win32-x64-msvc.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-win32-x64-msvc/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-win32-x64-msvc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-win32-x64-msvc/lightningcss.win32-x64-msvc.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-win32-x64-msvc/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/GenerateCoverImage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/GenerateCoverImage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +106,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.BookappApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "donghyun-backend",
+    "git-widget-placeholder": "hyeokjae-frontend-ai",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/Desktop/miniproj5",
     "node.js.selected.package.tslint": "(autodetect)",
