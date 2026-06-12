@@ -63,9 +63,23 @@
 
 ---
 
-## API 설계서
+## API 명세서
 
-> 추후 API 명세 추가 예정
+### 도서 API 명세
+
+![도서 API 명세](images/book-api.png)
+
+### 댓글 API 명세
+
+![댓글 API 명세](images/comment-api.png)
+
+### 로그인/회원가입 API 명세
+
+![로그인 회원가입 API 명세](images/auth-api.png)
+
+### 좋아요 API 명세
+
+![좋아요 API 명세](images/like-api.png)
 
 ---
 

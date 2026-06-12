@@ -95,18 +95,7 @@ public class BookService {
 
         return bookRepository.save(book);
     }
-
-    // 제목으로 도서 GET
-    @Transactional(readOnly = true)
-    public List<Book> searchByTitle(String title) {
-        return bookRepository.findByTitleContaining(title);
-    }
-
-    // 작가명으로 도서 GET
-    @Transactional(readOnly = true)
-    public List<Book> authorGetTitle(String author) {
-        return bookRepository.findByAuthorContaining(author);
-    }
+    
 
     // 제목, 저자 키워드로 도서 GET
     @Transactional(readOnly = true)

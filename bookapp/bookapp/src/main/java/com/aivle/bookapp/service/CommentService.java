@@ -37,15 +37,6 @@ public class CommentService {
         return CommentResponse.from(commentRepository.save(c));
     }
 
-    @Transactional
-    public CommentResponse updateComment(Long commentId, Long userId, String content) {
-        Comment c = commentRepository.findById(commentId)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "댓글을 찾을 수 없음"));
-        if (!c.getUser().getId().equals(userId))
-            throw new ResponseStatusException(HttpStatus.FORBIDDEN, "작성자만 수정할 수 있음");
-        c.setContent(content);
-        return CommentResponse.from(c);
-    }
 
     @Transactional
     public void deleteComment(Long commentId, Long userId) {

@@ -70,7 +70,7 @@ function BookEditPage({ book, onCancel, onSuccess, onNavigate }) {
           </div>
 
           <div className="button-group">
-            <button type="button" className="btn-edit" onClick={() => onNavigate('generateCover')}>표지 수정</button>
+            <button type="button" className="btn-editcover" onClick={() => onNavigate('generateCover')}>표지 수정</button>
             <button type="submit" className="btn-submit">저장</button>
             <button type="button" className="btn-cancel" onClick={onCancel}>취소</button>
           </div>
