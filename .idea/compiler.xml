@@ -11,12 +11,9 @@
         <module name="bookapp.test" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="17" />
   </component>
   <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="bookapp" options="-parameters" />
-      <module name="bookapp.main" options="-parameters" />
-      <module name="bookapp.test" options="-parameters" />
-    </option>
+    <option name="ADDITIONAL_OPTIONS_STRING" value="-parameters" />
   </component>
 </project>

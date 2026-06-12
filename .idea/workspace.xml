@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe0e3535-6e55-49f8-a0f6-18f936823ece" name="변경" comment="검색·좋아요 로직 수정, 불필요한 코드 정리, CSS 수정">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/bookdb.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/bookdb.mv.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/acorn" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/acorn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/baseline-browser-mapping" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/baseline-browser-mapping" afterDir="false" />
@@ -23,14 +27,78 @@
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/.bin/vite" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.bin/vite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/@babel/parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/@babel/parser/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/@rolldown/binding-darwin-arm64/rolldown-binding.darwin-arm64.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/acorn/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/acorn/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/acorn/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/acorn/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/acorn/dist/acorn.d.mts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/acorn/dist/acorn.d.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/acorn/dist/acorn.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/acorn/dist/acorn.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/acorn/dist/acorn.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/acorn/dist/acorn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/acorn/dist/acorn.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/acorn/dist/acorn.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/acorn/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/acorn/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/baseline-browser-mapping/dist/index.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/baseline-browser-mapping/dist/index.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/baseline-browser-mapping/dist/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/baseline-browser-mapping/dist/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/baseline-browser-mapping/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/baseline-browser-mapping/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/eslint/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/eslint/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/eslint/bin/eslint.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/eslint/bin/eslint.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/eslint/lib/linter/code-path-analysis/code-path-analyzer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/eslint/lib/linter/code-path-analysis/code-path-state.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/eslint/lib/linter/code-path-analysis/code-path-state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/eslint/lib/rules/prefer-arrow-callback.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/eslint/lib/rules/prefer-arrow-callback.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/eslint/lib/types/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/eslint/lib/types/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/eslint/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/eslint/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/fsevents.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/fsevents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/fsevents.node" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/fsevents/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/LICENSE" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/lightningcss.darwin-arm64.node" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/node_modules/lightningcss-darwin-arm64/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/cli.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/cli.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/config.d.mts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/config.d.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/experimental-index.d.mts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/experimental-index.d.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/experimental-index.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/experimental-index.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/filter-index.d.mts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/filter-index.d.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/index.d.mts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/index.d.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/index.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/index.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/parallel-plugin-worker.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/parallel-plugin-worker.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/parallel-plugin.d.mts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/parallel-plugin.d.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/parse-ast-index.d.mts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/parse-ast-index.d.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/parse-ast-index.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/parse-ast-index.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/plugins-index.d.mts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/plugins-index.d.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/plugins-index.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/plugins-index.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/binding-BaCZTfMx.d.mts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/binding-BaCZTfMx.d.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/binding-CXquf8ay.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/binding-CXquf8ay.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/bindingify-input-options-ClrST5Xx.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/bindingify-input-options-ClrST5Xx.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/constructors-BiPdtLBB.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/constructors-BiPdtLBB.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/constructors-CbNaT434.d.mts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/constructors-CbNaT434.d.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/define-config-3BX_X2Am.d.mts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/define-config-3BX_X2Am.d.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/error-BuvQYXuZ.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/error-BuvQYXuZ.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/load-config-K94jokAZ.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/load-config-K94jokAZ.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/normalize-string-or-regex-CNPF6PU9.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/normalize-string-or-regex-CNPF6PU9.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/parse-Bg2pr2Q5.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/parse-Bg2pr2Q5.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/prompt-DYnaB1Nb.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/prompt-DYnaB1Nb.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/resolve-tsconfig-CcfxWrib.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/resolve-tsconfig-CcfxWrib.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/rolldown-BjTk_MS0.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/rolldown-BjTk_MS0.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/rolldown-build-CrPk_lZe.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/rolldown-build-CrPk_lZe.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/transform-7xCUVrpL.d.mts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/transform-7xCUVrpL.d.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/watch-BZza93fH.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/shared/watch-BZza93fH.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/utils-index.d.mts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/utils-index.d.mts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/utils-index.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/dist/utils-index.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/rolldown/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/rolldown/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/vite/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/vite/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/vite/dist/client/client.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/vite/dist/client/client.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/vite/dist/node/chunks/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/vite/dist/node/chunks/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/vite/dist/node/chunks/dist.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/vite/dist/node/chunks/dist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/vite/dist/node/chunks/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/vite/dist/node/chunks/node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/vite/dist/node/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/vite/dist/node/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/node_modules/vite/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/node_modules/vite/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/SignUpPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/SignUpPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +171,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "Spring Boot.BookappApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "donghyun-backend",
+    "git-widget-placeholder": "yujin-exception",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/Desktop/miniproj5",
     "node.js.selected.package.tslint": "(autodetect)",
